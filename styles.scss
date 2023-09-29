@@ -20,8 +20,8 @@ header{
     align-items: center;
     justify-content: flex-end;
     .main-title{
-        padding-bottom: 3rem;
-        color: aliceblue;
+        padding-bottom: 2rem;
+        color: white;
         font-size: 2rem;
         z-index: 99; //så att texten placerar sig över gradient/::after
     }
@@ -38,8 +38,6 @@ header::after {
     background: linear-gradient(to bottom, transparent 0%, black 100%);
 }
 
-main{
-    height: 100vh;
     p{
         width: 40ch;
         margin: 100px auto;
@@ -49,31 +47,49 @@ main{
         margin-top: 50px;
     }
     p:last-child{
-        padding-bottom: 130px;
+        padding-bottom: 50px;
     }
-}
+
 .fixed-navigation{
     position: fixed;
     bottom: 0;
     right: 0;
     width: 100%;
     background-color: green;
-    height: 50px;
+    height: 10vh;
     ul{
-        display: flex;
         list-style: none;
-        justify-content: space-between;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex: 0 0 20%;
+        } 
         a{
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 70%;
+            max-width: 100px;
+            text-decoration: none;
         }
         a:focus{
             background-color: white;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 40%;
+            border-bottom-right-radius: 40%;
+            .material-symbols-outlined{
+                color: red;
+            }
         }
     }
-    
-    .material-symbols-outlined {
+}
+.material-symbols-outlined {
     font-variation-settings:
     'FILL' 100,
     'wght' 700,
@@ -81,4 +97,3 @@ main{
     'opsz' 24;
     color:  white;
     }
-}

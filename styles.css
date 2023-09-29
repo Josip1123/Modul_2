@@ -21,8 +21,8 @@ header {
   justify-content: flex-end;
 }
 header .main-title {
-  padding-bottom: 3rem;
-  color: aliceblue;
+  padding-bottom: 2rem;
+  color: white;
   font-size: 2rem;
   z-index: 99;
 }
@@ -37,19 +37,18 @@ header::after {
   background: linear-gradient(to bottom, transparent 0%, black 100%);
 }
 
-main {
-  height: 100vh;
-}
-main p {
+p {
   width: 40ch;
   margin: 100px auto;
   font-size: 1rem;
 }
-main p:first-child {
+
+p:first-child {
   margin-top: 50px;
 }
-main p:last-child {
-  padding-bottom: 130px;
+
+p:last-child {
+  padding-bottom: 50px;
 }
 
 .fixed-navigation {
@@ -58,22 +57,41 @@ main p:last-child {
   right: 0;
   width: 100%;
   background-color: green;
-  height: 50px;
+  height: 10vh;
 }
 .fixed-navigation ul {
-  display: flex;
   list-style: none;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.fixed-navigation ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  flex: 0 0 20%;
 }
 .fixed-navigation ul a {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 70%;
+  max-width: 100px;
+  text-decoration: none;
 }
 .fixed-navigation ul a:focus {
   background-color: white;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
 }
-.fixed-navigation .material-symbols-outlined {
+.fixed-navigation ul a:focus .material-symbols-outlined {
+  color: red;
+}
+
+.material-symbols-outlined {
   font-variation-settings: "FILL" 100, "wght" 700, "GRAD" 0, "opsz" 24;
   color: white;
 }/*# sourceMappingURL=styles.css.map */
