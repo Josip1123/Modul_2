@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+header{
+    background-image: url(/img/pexels-oleksandr-p-12932558.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 35vh;
+    display: flex; //använt flex eftersom jag tycker att det blir lättre att centrera
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    .main-title{
+        padding-bottom: 3rem;
+        color: aliceblue;
+        font-size: 2rem;
+        z-index: 99; //så att texten placerar sig över gradient/::after
+    }
+}
+
+//detta här är bara en gradient from black to transparent med hjälp av pseudoelement som gör att texen sysn lite bättre
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+
+main{
+    height: 100vh;
+    p{
+        width: 40ch;
+        margin: 100px auto;
+        font-size: 1rem;
+    }
+    p:first-child{
+        margin-top: 50px;
+    }
+    p:last-child{
+        padding-bottom: 130px;
+    }
+}
+.fixed-navigation{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: green;
+    height: 50px;
+    ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        a{
+            display: block;
+        }
+        a:focus{
+            background-color: white;
+            border-bottom-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+    }
+    
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 100,
+    'wght' 700,
+    'GRAD' 0,
+    'opsz' 24;
+    color:  white;
+    }
+}
